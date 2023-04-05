@@ -25,6 +25,13 @@ public class TodoController {
         return todoRepository.findAll();
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Todo> buscarPeloId(@PathVariable Long id){
+        return todoRepository.findById(id)
+        .map(ResponseEntity::ok)
+        .orElse(ResponseEntity.notFound().build());
+    }
+
 //     @GetMapping("/{id}")
 //     public ResponseEntity<Client> findById(@PathVariable Long id){
 //         return clientRepository.findById(id)
