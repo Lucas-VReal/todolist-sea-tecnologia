@@ -1,0 +1,1 @@
+INSERT INTO TODO values('01', '2023-04-05' , 'FALSE', 'Tomar cafe da manha');
