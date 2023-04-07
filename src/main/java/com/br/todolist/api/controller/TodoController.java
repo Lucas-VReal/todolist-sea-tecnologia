@@ -50,5 +50,14 @@ public class TodoController {
         return ResponseEntity.ok(updatedItem);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> DeleteById(@PathVariable Long id){
+        if(!todoRepository.existsById(id)){
+            return ResponseEntity.notFound().build();
+        }
+        todoService.excluir(id);
+        return ResponseEntity.noContent().build();
+    }
+
 
 }

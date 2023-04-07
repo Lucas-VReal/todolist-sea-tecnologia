@@ -2,6 +2,7 @@ package com.br.todolist.service;
 
 import javax.transaction.Transactional;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.br.todolist.data.models.Todo;
@@ -19,5 +20,8 @@ public class TodoService {
         return todoRepository.save(newItem);
     }
 
+    public void excluir(Long id) {
+
+    }
     
 }
