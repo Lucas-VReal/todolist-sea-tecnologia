@@ -40,4 +40,15 @@ public class TodoController {
         return todoService.salvar(newItem);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Todo> updateAItem (@PathVariable Long id, @Valid @RequestBody Todo updatedItem){
+        if(!todoRepository.existsById(id)){
+            return ResponseEntity.notFound().build();
+        }
+        updatedItem.setId(id);
+        todoService.salvar(updatedItem);
+        return ResponseEntity.ok(updatedItem);
+    }
+
+
 }
