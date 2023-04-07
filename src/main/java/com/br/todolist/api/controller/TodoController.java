@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.br.todolist.data.models.Todo;
 import com.br.todolist.data.repositories.TodoRepository;
+import com.br.todolist.service.TodoService;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -19,6 +20,7 @@ import java.util.List;
 public class TodoController {
 
     private final TodoRepository todoRepository;
+    private final TodoService todoService;
 
     @GetMapping
     public List<Todo> listar(){
@@ -32,47 +34,10 @@ public class TodoController {
         .orElse(ResponseEntity.notFound().build());
     }
 
-//     @GetMapping("/{id}")
-//     public ResponseEntity<Client> findById(@PathVariable Long id){
-//         return clientRepository.findById(id)
-// //                .map(client -> ResponseEntity.ok(client))
-//                 .map(ResponseEntity::ok)
-//                 .orElse(ResponseEntity.notFound().build());
-
-// //        Optional<client> clientOptional = clientRepository.findById(id);
-// //
-// //        if(clientOptional.isPresent()){
-// //            return ResponseEntity.ok(clientOptional.get());
-// //        }
-// //
-// //        return ResponseEntity.notFound().build();
-//     }
-
-//     @PostMapping
-//     @ResponseStatus(HttpStatus.CREATED)
-//     public Client addNewClient (@Valid @RequestBody Client client){
-//         return clientService.salvar(client);
-//     }
-
-//     @PutMapping("/{id}")
-//     @ApiOperation(value= "Update a client by Id")
-//     public ResponseEntity<Client> updateAClient (@PathVariable Long id, @Valid @RequestBody Client client){
-//         if(!clientRepository.existsById(id)){
-//             return ResponseEntity.notFound().build();
-//         }
-//         client.setId(id);
-//         clientService.salvar(client);
-//         return ResponseEntity.ok(client);
-//     }
-
-//     @DeleteMapping("/{id}")
-//     @ApiOperation(value= "Delete a client")
-//     public ResponseEntity<Void> DeleteById(@PathVariable Long id){
-//         if(!clientRepository.existsById(id)){
-//             return ResponseEntity.notFound().build();
-//         }
-//         clientService.excluir(id);
-//         return ResponseEntity.noContent().build();
-//     }
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public Todo addNewIntem (@RequestBody Todo newItem){
+        return todoService.salvar(newItem);
+    }
 
 }

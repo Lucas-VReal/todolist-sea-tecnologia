@@ -4,6 +4,9 @@ import java.util.Date;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -11,18 +14,16 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@JsonIgnoreProperties
 public class Todo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    @SequenceGenerator(initialValue = 3, name = "seq_generator")
     private Long id;
 
-    @NotBlank
     private String titulo;
-
-    @NotBlank
     private Date dataDeCriacao;
-
-    @NotBlank
     private boolean feito;
 }
