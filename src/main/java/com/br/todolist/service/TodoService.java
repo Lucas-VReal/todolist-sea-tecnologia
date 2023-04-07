@@ -1,8 +1,5 @@
 package com.br.todolist.service;
 
-import javax.transaction.Transactional;
-
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.br.todolist.data.models.Todo;

@@ -102,7 +102,7 @@ http://localhost:8080/swagger-ui/#/
 
 
 
-
+Link para testes: http://localhost:8080/swagger-ui/#/
 
 ## Autor
 

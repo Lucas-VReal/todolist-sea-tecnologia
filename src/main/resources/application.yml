@@ -18,5 +18,9 @@ spring:
         generate-ddl: true
         hibernate:
             ddl-auto: create-drop
+
+    mvc:
+        pathmatch:
+            matching-strategy: ANT_PATH_MATCHER
     
     banner.location: banner.txt

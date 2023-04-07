@@ -12,11 +12,10 @@ import com.br.todolist.service.TodoService;
 import javax.validation.Valid;
 import java.util.List;
 
-@AllArgsConstructor //cria os construtores automaticamente
+@AllArgsConstructor
 @RestController
 @RequestMapping("/todo")
 @CrossOrigin(origins = "*")
-
 public class TodoController {
 
     private final TodoRepository todoRepository;
