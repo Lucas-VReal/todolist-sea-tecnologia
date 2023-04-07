@@ -1,5 +1,8 @@
 package com.br.todolist.service;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 import org.springframework.stereotype.Service;
 
 import com.br.todolist.data.models.Todo;
@@ -14,11 +17,16 @@ public class TodoService {
     private final TodoRepository todoRepository;
 
     public Todo salvar (Todo newItem){
+        newItem.setDataDeCriacao(LocalDate.now());
         return todoRepository.save(newItem);
     }
 
-    public void excluir(Long id) {
+    private Date dft(LocalDate now) {
+        return null;
+    }
 
+    public void excluir(Long id) {
+        todoRepository.deleteById(id);
     }
     
 }
