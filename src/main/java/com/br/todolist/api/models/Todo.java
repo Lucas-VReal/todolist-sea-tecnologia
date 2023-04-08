@@ -1,4 +1,4 @@
-package com.br.todolist.api.data.models;
+package com.br.todolist.api.models;
 
 import java.time.LocalDate;
 import javax.persistence.*;
