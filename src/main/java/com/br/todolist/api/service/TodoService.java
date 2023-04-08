@@ -1,9 +1,9 @@
-package com.br.todolist.service;
+package com.br.todolist.api.service;
 
 import java.time.LocalDate;
 import org.springframework.stereotype.Service;
-import com.br.todolist.data.models.Todo;
-import com.br.todolist.data.repositories.TodoRepository;
+import com.br.todolist.api.data.models.Todo;
+import com.br.todolist.api.data.repositories.TodoRepository;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

@@ -5,9 +5,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.br.todolist.data.models.Todo;
-import com.br.todolist.data.repositories.TodoRepository;
-import com.br.todolist.service.TodoService;
+import com.br.todolist.api.data.models.Todo;
+import com.br.todolist.api.data.repositories.TodoRepository;
+import com.br.todolist.api.service.TodoService;
 
 import javax.validation.Valid;
 import java.util.List;
