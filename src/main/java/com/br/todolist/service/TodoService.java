@@ -21,7 +21,7 @@ public class TodoService {
     }
 
     public void excluir(Long id) {
-
+        todoRepository.deleteById(id);
     }
     
 }
