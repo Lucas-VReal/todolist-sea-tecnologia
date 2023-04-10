@@ -11,7 +11,13 @@ Como parte da seleção para se tornar membro do time SEA Tecnologia, realizei u
 <br>
 <br>
 
-## Como baixar e rodar a aplicação: 
+## Como testar a aplicação que está rodando na nuvem:
+
+Get All: https://todolist-sea-tecnologia-production.up.railway.app/todo
+
+Get One by Id: https://todolist-sea-tecnologia-production.up.railway.app/todo/1
+
+## Como baixar e rodar a aplicação localmente: 
  
   ### Abra seu terminal git bash e cole (na ordem): 
  
