@@ -5,7 +5,7 @@
 </div>
 <br>
 
-Como parte da seleção para se tornar membro do time SEA Tecnologia, realizei um pequeno desafio: 
+Como parte da seleção para me tornar membro do time SEA Tecnologia, realizei um pequeno desafio: 
 
 - Desenvolver um CRUD na sua linguagem preferida
 <br>
