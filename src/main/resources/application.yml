@@ -1,0 +1,26 @@
+spring:
+    application:
+        name: 'To-Do-List'
+    h2:
+        console:
+            enabled: true
+            path: /h2
+
+    datasource:
+        url: jdbc:h2:mem:tododb
+        username: sa
+        password:
+        driver-class-name: org.h2.Driver
+
+    jpa:
+        defer-datasource-initialization: true
+        database-platform: org.hibernate.dialect.H2Dialect  
+        generate-ddl: true
+        hibernate:
+            ddl-auto: create-drop
+
+    mvc:
+        pathmatch:
+            matching-strategy: ANT_PATH_MATCHER
+    
+    banner.location: banner.txt

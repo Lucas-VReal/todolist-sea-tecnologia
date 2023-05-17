@@ -5,7 +5,7 @@
 </div>
 <br>
 
-Como parte da seleção para se tornar membro do time SEA Tecnologia, realizei um pequeno desafio: 
+Como parte da seleção para me tornar membro do time SEA Tecnologia, realizei um pequeno desafio: 
 
 - Desenvolver um CRUD na sua linguagem preferida
 <br>
@@ -25,8 +25,6 @@ Get One by Id: https://todolist-sea-tecnologia-production.up.railway.app/todo/1
     git clone https://github.com/Lucas-VReal/todolist-sea-tecnologia
   ```
     cd todolist-sea-tecnologia
-  ```
-  git checkout develop
   ```
     mvn clean install
   ```
