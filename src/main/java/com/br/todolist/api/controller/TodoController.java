@@ -27,7 +27,7 @@ public class TodoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Todo> buscarPeloId(@PathVariable Long id){
+    public ResponseEntity<Todo> findById(@PathVariable Long id){
         return todoRepository.findById(id)
         .map(ResponseEntity::ok)
         .orElse(ResponseEntity.notFound().build());
@@ -36,7 +36,7 @@ public class TodoController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Todo addNewIntem (@RequestBody Todo newItem){
-        return todoService.salvar(newItem);
+        return todoService.save(newItem);
     }
 
     @PutMapping("/{id}")
@@ -45,16 +45,16 @@ public class TodoController {
             return ResponseEntity.notFound().build();
         }
         updatedItem.setId(id);
-        todoService.salvar(updatedItem);
+        todoService.save(updatedItem);
         return ResponseEntity.ok(updatedItem);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> DeleteById(@PathVariable Long id){
+    public ResponseEntity<Void> deleteById(@PathVariable Long id){
         if(!todoRepository.existsById(id)){
             return ResponseEntity.notFound().build();
         }
-        todoService.excluir(id);
+        todoService.delete(id);
         return ResponseEntity.noContent().build();
     }
 

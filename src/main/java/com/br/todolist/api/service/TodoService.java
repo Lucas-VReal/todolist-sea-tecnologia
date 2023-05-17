@@ -14,12 +14,12 @@ public class TodoService {
 
     private final TodoRepository todoRepository;
 
-    public Todo salvar (Todo newItem){
-        newItem.setDataDeCriacao(LocalDate.now());
+    public Todo save (Todo newItem){
+        newItem.setCreationDate(LocalDate.now());
         return todoRepository.save(newItem);
     }
 
-    public void excluir(Long id) {
+    public void delete(Long id) {
         todoRepository.deleteById(id);
     }
     
